@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FontAwesome.ttf">
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarPopup">
+            <connections>
+                <outlet property="BtnClose" destination="wgt-7Y-Nb6" id="d7i-WX-crk"/>
+                <outlet property="BtnDone" destination="dlw-fZ-q3a" id="dT5-L9-aub"/>
+                <outlet property="btnNextMonth" destination="KWj-Xc-Oxs" id="RYW-6c-7KU"/>
+                <outlet property="btnPrevMonth" destination="Te7-cl-rHp" id="ADU-Pv-hie"/>
+                <outlet property="gestureTitleLongPress" destination="PF1-ka-IJX" id="5cj-e5-3p8"/>
+                <outlet property="lblTitle" destination="QKm-uk-Tuh" id="lUb-DY-8dy"/>
+                <outlet property="viewButtonBack" destination="Cv8-Hf-hIR" id="AVM-x2-BCf"/>
+                <outlet property="viewContainer" destination="kmP-c4-8eB" id="aLr-Uk-cJ6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="399"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cv8-Hf-hIR">
+                    <rect key="frame" x="0.0" y="349" width="310" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgt-7Y-Nb6">
+                            <rect key="frame" x="0.0" y="1" width="155" height="49"/>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancel:" destination="-1" eventType="touchUpInside" id="Z7D-bw-q2g"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlw-fZ-q3a">
+                            <rect key="frame" x="156" y="1" width="154" height="49"/>
+                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="OK">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="done:" destination="-1" eventType="touchUpInside" id="dUO-1t-bQq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="wgt-7Y-Nb6" firstAttribute="leading" secondItem="Cv8-Hf-hIR" secondAttribute="leading" id="1hJ-kn-J4g"/>
+                        <constraint firstItem="dlw-fZ-q3a" firstAttribute="top" secondItem="Cv8-Hf-hIR" secondAttribute="top" constant="1" id="3uK-7A-iaF"/>
+                        <constraint firstItem="wgt-7Y-Nb6" firstAttribute="height" secondItem="dlw-fZ-q3a" secondAttribute="height" id="4aq-0X-sVE"/>
+                        <constraint firstItem="wgt-7Y-Nb6" firstAttribute="width" secondItem="dlw-fZ-q3a" secondAttribute="width" id="5kT-c3-D3M"/>
+                        <constraint firstAttribute="height" constant="50" id="Gss-An-nMr"/>
+                        <constraint firstAttribute="bottom" secondItem="wgt-7Y-Nb6" secondAttribute="bottom" id="Mmb-JA-goq"/>
+                        <constraint firstItem="wgt-7Y-Nb6" firstAttribute="top" secondItem="Cv8-Hf-hIR" secondAttribute="top" constant="1" id="Uez-3D-igV"/>
+                        <constraint firstItem="dlw-fZ-q3a" firstAttribute="leading" secondItem="wgt-7Y-Nb6" secondAttribute="trailing" constant="1" id="j0e-4K-oqd"/>
+                        <constraint firstAttribute="bottom" secondItem="dlw-fZ-q3a" secondAttribute="bottom" id="ldU-1Y-6Nv"/>
+                        <constraint firstAttribute="trailing" secondItem="dlw-fZ-q3a" secondAttribute="trailing" id="vgb-AM-v2R"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="May 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKm-uk-Tuh">
+                    <rect key="frame" x="115" y="15" width="81" height="24"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" white="0.45284273018648014" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="PF1-ka-IJX" appends="YES" id="AgC-jz-F5j"/>
+                    </connections>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWj-Xc-Oxs">
+                    <rect key="frame" x="211" y="5" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="Czj-4t-exp"/>
+                        <constraint firstAttribute="height" constant="44" id="sJJ-Fd-hCA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="20"/>
+                    <state key="normal" title="">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionNextDate:" destination="-1" eventType="touchUpInside" id="Zvu-Q0-omX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Te7-cl-rHp">
+                    <rect key="frame" x="56" y="5" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="46P-ZF-5ZL"/>
+                        <constraint firstAttribute="height" constant="44" id="YfG-5B-r66"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="20"/>
+                    <state key="normal" title="">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionPrevDate:" destination="-1" eventType="touchUpInside" id="XC8-Vo-lBY"/>
+                    </connections>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmP-c4-8eB" userLabel="DateView">
+                    <rect key="frame" x="15" y="54" width="280" height="280"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="y4Y-0Z-EQJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="kmP-c4-8eB" firstAttribute="top" secondItem="Te7-cl-rHp" secondAttribute="bottom" constant="5" id="D3n-o9-y1V"/>
+                <constraint firstItem="KWj-Xc-Oxs" firstAttribute="centerY" secondItem="QKm-uk-Tuh" secondAttribute="centerY" id="DSg-kY-2tx"/>
+                <constraint firstAttribute="trailing" secondItem="Cv8-Hf-hIR" secondAttribute="trailing" id="GBP-0d-5NN"/>
+                <constraint firstItem="kmP-c4-8eB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Gio-JV-jpH"/>
+                <constraint firstAttribute="centerX" secondItem="QKm-uk-Tuh" secondAttribute="centerX" id="Hi1-uZ-G2a"/>
+                <constraint firstItem="Cv8-Hf-hIR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JmO-r3-BkG"/>
+                <constraint firstItem="QKm-uk-Tuh" firstAttribute="leading" secondItem="Te7-cl-rHp" secondAttribute="trailing" constant="15" id="PS8-x3-X6a"/>
+                <constraint firstItem="Te7-cl-rHp" firstAttribute="centerY" secondItem="QKm-uk-Tuh" secondAttribute="centerY" id="PWM-kC-rjn"/>
+                <constraint firstItem="Cv8-Hf-hIR" firstAttribute="top" secondItem="kmP-c4-8eB" secondAttribute="bottom" constant="15" id="WqJ-7h-yzh"/>
+                <constraint firstAttribute="bottom" secondItem="Cv8-Hf-hIR" secondAttribute="bottom" id="ciY-pn-vi4"/>
+                <constraint firstItem="QKm-uk-Tuh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="oUm-x9-K0e"/>
+                <constraint firstAttribute="trailing" secondItem="kmP-c4-8eB" secondAttribute="trailing" constant="15" id="uje-5O-2Mk"/>
+                <constraint firstItem="KWj-Xc-Oxs" firstAttribute="leading" secondItem="QKm-uk-Tuh" secondAttribute="trailing" constant="15" id="zKp-e0-ahT"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="382" y="427.5"/>
+        </view>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.001" id="PF1-ka-IJX"/>
+    </objects>
+</document>

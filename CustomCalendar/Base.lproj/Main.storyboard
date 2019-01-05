@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xcG-6W-4SG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="fontawesome-webfont.ttf">
+            <string>FontAwesome</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Choose a time-->
+        <scene sceneID="vGk-rm-RFI">
+            <objects>
+                <viewController title="Choose a time" id="LBa-Cd-0nb" customClass="CalendarScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vnM-wh-c21"/>
+                        <viewControllerLayoutGuide type="bottom" id="lOG-g7-RX6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kj6-qj-DA3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3708" translatesAutoresizingMaskIntoConstraints="NO" id="Uzj-lY-YQV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </imageView>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="0eg-vk-W7Z" userLabel="CalendarView">
+                                <rect key="frame" x="15" y="60" width="345" height="241"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-9s-bBw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pe-R3-VK1">
+                                        <rect key="frame" x="146.5" y="11.5" width="82" height="22"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="laX-yb-lUa" appends="YES" id="ivP-vw-nJc"/>
+                                        </connections>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-iG-EJc">
+                                        <rect key="frame" x="316" y="0.5" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="Ney-55-lk7"/>
+                                            <constraint firstAttribute="height" constant="44" id="znc-Mb-5DV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="30"/>
+                                        <state key="normal" title="">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZM-c5-Dso">
+                                        <rect key="frame" x="15" y="0.5" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="7pk-xI-YH0"/>
+                                            <constraint firstAttribute="height" constant="44" id="WYX-40-dRH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="30"/>
+                                        <state key="normal" title="">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cx5-iG-EJc" secondAttribute="trailing" constant="15" id="5qs-4z-HF0"/>
+                                    <constraint firstItem="3Pe-R3-VK1" firstAttribute="centerY" secondItem="cx5-iG-EJc" secondAttribute="centerY" id="803-Po-qhW"/>
+                                    <constraint firstItem="iZM-c5-Dso" firstAttribute="centerY" secondItem="3Pe-R3-VK1" secondAttribute="centerY" id="Eom-ip-g0W"/>
+                                    <constraint firstItem="iZM-c5-Dso" firstAttribute="leading" secondItem="NT6-9s-bBw" secondAttribute="leading" constant="15" id="MdQ-HL-Odh"/>
+                                    <constraint firstAttribute="centerY" secondItem="3Pe-R3-VK1" secondAttribute="centerY" id="OwA-J4-4xV"/>
+                                    <constraint firstAttribute="height" constant="45" id="TOB-Tu-I8j"/>
+                                    <constraint firstItem="3Pe-R3-VK1" firstAttribute="leading" secondItem="cx5-iG-EJc" secondAttribute="leading" constant="15" id="YV1-ih-t3d"/>
+                                    <constraint firstAttribute="centerX" secondItem="3Pe-R3-VK1" secondAttribute="centerX" id="eKU-yb-ZM9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YV1-ih-t3d"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvV-5a-jU3">
+                                <rect key="frame" x="0.0" y="567" width="375" height="36"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Calendar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCalendar:" destination="LBa-Cd-0nb" eventType="touchUpInside" id="4es-fh-TX5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LvV-5a-jU3" firstAttribute="centerX" secondItem="kj6-qj-DA3" secondAttribute="centerX" id="1hl-mY-azD"/>
+                            <constraint firstItem="Uzj-lY-YQV" firstAttribute="leading" secondItem="kj6-qj-DA3" secondAttribute="leading" id="2VX-hQ-0Jk"/>
+                            <constraint firstItem="NT6-9s-bBw" firstAttribute="leading" secondItem="kj6-qj-DA3" secondAttribute="leading" id="5H7-hV-x8v"/>
+                            <constraint firstItem="0eg-vk-W7Z" firstAttribute="leading" secondItem="kj6-qj-DA3" secondAttribute="leading" constant="15" id="7Xw-bx-ItQ"/>
+                            <constraint firstItem="0eg-vk-W7Z" firstAttribute="leading" secondItem="kj6-qj-DA3" secondAttribute="leading" id="9Qe-fy-7b0"/>
+                            <constraint firstAttribute="trailing" secondItem="Uzj-lY-YQV" secondAttribute="trailing" id="Eem-o1-a6O"/>
+                            <constraint firstAttribute="trailing" secondItem="0eg-vk-W7Z" secondAttribute="trailing" constant="15" id="FH5-vY-CxJ"/>
+                            <constraint firstAttribute="trailing" secondItem="LvV-5a-jU3" secondAttribute="trailing" id="GMU-eR-Xuq"/>
+                            <constraint firstAttribute="centerY" secondItem="0eg-vk-W7Z" secondAttribute="centerY" id="MEu-lW-SpS"/>
+                            <constraint firstAttribute="height" secondItem="0eg-vk-W7Z" secondAttribute="height" multiplier="2.5" id="Mhb-4L-uxI"/>
+                            <constraint firstItem="0eg-vk-W7Z" firstAttribute="top" secondItem="NT6-9s-bBw" secondAttribute="bottom" constant="15" id="Os6-TM-hYS"/>
+                            <constraint firstItem="LvV-5a-jU3" firstAttribute="leading" secondItem="kj6-qj-DA3" secondAttribute="leading" id="QSS-mO-kZD"/>
+                            <constraint firstAttribute="bottom" secondItem="Uzj-lY-YQV" secondAttribute="bottom" id="Qeg-tf-fFX"/>
+                            <constraint firstAttribute="trailing" secondItem="NT6-9s-bBw" secondAttribute="trailing" id="S1b-p8-jKA"/>
+                            <constraint firstAttribute="centerX" secondItem="0eg-vk-W7Z" secondAttribute="centerX" id="VbB-15-72T"/>
+                            <constraint firstItem="Uzj-lY-YQV" firstAttribute="top" secondItem="kj6-qj-DA3" secondAttribute="top" id="bFT-Pf-glr"/>
+                            <constraint firstItem="NT6-9s-bBw" firstAttribute="top" secondItem="vnM-wh-c21" secondAttribute="bottom" id="hNh-hB-jPl"/>
+                            <constraint firstItem="0eg-vk-W7Z" firstAttribute="leading" secondItem="kj6-qj-DA3" secondAttribute="leading" constant="150" id="jwN-fK-sz8"/>
+                            <constraint firstAttribute="trailing" secondItem="0eg-vk-W7Z" secondAttribute="trailing" id="lzD-sI-edc"/>
+                            <constraint firstItem="0eg-vk-W7Z" firstAttribute="top" secondItem="vnM-wh-c21" secondAttribute="bottom" id="m94-t6-Ij2"/>
+                            <constraint firstAttribute="trailing" secondItem="0eg-vk-W7Z" secondAttribute="trailing" constant="150" id="srS-u3-6Eg"/>
+                            <constraint firstAttribute="bottom" secondItem="LvV-5a-jU3" secondAttribute="bottom" id="stR-2M-CqU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9Qe-fy-7b0"/>
+                                <exclude reference="MEu-lW-SpS"/>
+                                <exclude reference="VbB-15-72T"/>
+                                <exclude reference="jwN-fK-sz8"/>
+                                <exclude reference="lzD-sI-edc"/>
+                                <exclude reference="m94-t6-Ij2"/>
+                                <exclude reference="srS-u3-6Eg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom Calendar" id="a5m-Fa-zBG"/>
+                    <connections>
+                        <outlet property="customView" destination="0eg-vk-W7Z" id="aKM-nD-gpl"/>
+                        <outlet property="nextButton" destination="cx5-iG-EJc" id="AvY-hl-wfU"/>
+                        <outlet property="prevButton" destination="iZM-c5-Dso" id="sqh-kP-If0"/>
+                        <outlet property="titleLabel" destination="3Pe-R3-VK1" id="4Cu-yt-qMP"/>
+                        <outlet property="titleLongPressGesture" destination="laX-yb-lUa" id="4cs-VI-P9Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVk-Ya-nB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.001" id="laX-yb-lUa" userLabel="TitleClick"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="415"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SFK-U0-jvT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xcG-6W-4SG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="mH4-aG-geh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LBa-Cd-0nb" kind="relationship" relationship="rootViewController" id="GG5-9f-WbD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Quw-YU-lmk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715" y="415"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3708" width="1920" height="1080"/>
+    </resources>
+</document>
